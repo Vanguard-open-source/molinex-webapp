@@ -1,1 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --molinex-blue: #0b4f8a;
+  --molinex-blue-dark: #073763;
+  --molinex-blue-light: #eaf4fb;
+
+  --molinex-green: #4f8a2b;
+  --molinex-green-dark: #35651d;
+  --molinex-green-light: #eef7e8;
+
+  --molinex-gold: #f2b705;
+  --molinex-gold-dark: #a86f00;
+
+  --molinex-text-primary: #102a43;
+  --molinex-text-secondary: #486581;
+  --molinex-border: #d9e2ec;
+  --molinex-background: #f5f7fa;
+  --molinex-surface: #ffffff;
+
+  --molinex-success: #2e7d32;
+  --molinex-success-background: #e8f5e9;
+  --molinex-info: #1976d2;
+  --molinex-info-background: #e3f2fd;
+  --molinex-warning: #a86f00;
+  --molinex-warning-background: #fff4d6;
+  --molinex-critical: #c62828;
+  --molinex-critical-background: #fdecec;
+  --molinex-neutral: #607d8b;
+  --molinex-neutral-background: #eceff1;
+
+  --molinex-font-heading: "Poppins", sans-serif;
+  --molinex-font-body: "Inter", sans-serif;
+
+  --molinex-space-xs: 0.25rem;
+  --molinex-space-s: 0.5rem;
+  --molinex-space-m: 1rem;
+  --molinex-space-l: 1.5rem;
+  --molinex-space-xl: 2rem;
+  --molinex-space-2xl: 3rem;
+  --molinex-space-3xl: 4rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--molinex-background);
+  color: var(--molinex-text-primary);
+  font-family: var(--molinex-font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: var(--molinex-font-heading);
+}/* You can add global styles to this file, and also import other style files */
