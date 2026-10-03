@@ -13,8 +13,36 @@ html {
         primary: mat.$azure-palette,
         tertiary: mat.$blue-palette,
       ),
-      typography: Roboto,
+      typography: Inter,
       density: 0,
+    )
+  );
+  @include mat.theme-overrides(
+    (
+      primary: #0b4f8a,
+      on-primary: #ffffff,
+      primary-container: #eaf4fb,
+      on-primary-container: #073763,
+
+      secondary: #4f8a2b,
+      on-secondary: #ffffff,
+      secondary-container: #eef7e8,
+      on-secondary-container: #35651d,
+
+      tertiary: #f2b705,
+      on-tertiary: #073763,
+      tertiary-container: #fff4d6,
+      on-tertiary-container: #a86f00,
+
+      error: #c62828,
+      on-error: #ffffff,
+      error-container: #fdecec,
+
+      surface: #ffffff,
+      on-surface: #102a43,
+      on-surface-variant: #486581,
+      outline: #d9e2ec,
+      outline-variant: #d9e2ec,
     )
   );
 }
