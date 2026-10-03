@@ -1,6 +1,9 @@
 {
   "name": "molinex-webapp",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "Molinex Web Application for rice mill operational management",
+  "author": "Vanguard Open Source Development Team",
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
