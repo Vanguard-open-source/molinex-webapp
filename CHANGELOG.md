@@ -20,3 +20,14 @@ All notable changes to Molinex are documented in this file.
 
 - Aligned the frontend structure with Domain-Driven Design and Clean Architecture.
 - Improved production, quality, waste, machinery, and maintenance views.
+
+## [0.1.1] - 2026-10-05
+
+### Added
+
+- Azure Static Web Apps navigation fallback for Angular client-side routes.
+
+### Changed
+
+- Production environment now consumes the deployed Molinex mock API.
+- Production bundle validated locally against the live Azure API.
