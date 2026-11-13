@@ -1,0 +1,6 @@
+@if (store.currentUser(); as user) {
+  <span class="user-name">{{ user.displayName }}</span>
+  <button type="button" (click)="signOut()">{{ 'iam.sign-out' | translate }}</button>
+} @else {
+  <a routerLink="/iam/sign-in">{{ 'iam.sign-in' | translate }}</a>
+}

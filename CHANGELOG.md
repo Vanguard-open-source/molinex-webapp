@@ -2,6 +2,20 @@
 
 All notable changes to Molinex are documented in this file.
 
+## [2.0.0] - 2026-11-13
+
+### Added
+
+- Identity and Access Management with sign-in, administrator-only user creation, signal session state, guards and bearer interception.
+- Public plan comparison, value proposition and persisted commercial inquiry views in English and Spanish.
+- Landing-page terms and privacy footer links.
+
+### Changed
+
+- Numeric waste, machine and maintenance identities and references, server-assigned IDs, and authenticated maintenance principals.
+- Role-filtered operational navigation and protected routes; sessionStorage failures do not prevent in-memory sessions.
+- Synchronized demo data with the standalone mock API without changing environment base URLs or package versions.
+
 ## [0.1.0] - 2026-10-04
 
 ### Added

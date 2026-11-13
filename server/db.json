@@ -1,8 +1,37 @@
 {
-  "plans": [],
   "commercial-inquiries": [],
-  "users": [],
-  "roles": [],
+  "users": [
+    {
+      "id": 1,
+      "email": "administrator@molinex.test",
+      "password": "FAKE-demo-only-2026!",
+      "fullName": "Jorge Salazar",
+      "roles": [
+        "administrator"
+      ],
+      "status": "ACTIVE"
+    },
+    {
+      "id": 2,
+      "email": "technician@molinex.test",
+      "password": "FAKE-demo-only-2026!",
+      "fullName": "Carlos Mendoza",
+      "roles": [
+        "technician"
+      ],
+      "status": "ACTIVE"
+    },
+    {
+      "id": 3,
+      "email": "operator@molinex.test",
+      "password": "FAKE-demo-only-2026!",
+      "fullName": "Lucía Torres",
+      "roles": [
+        "operator"
+      ],
+      "status": "ACTIVE"
+    }
+  ],
   "raw-material-receptions": [
     {
       "id": 1,
@@ -352,7 +381,7 @@
   ],
   "waste-records": [
     {
-      "id": "a72dff13-4b04-472f-876a-d5fe5c649df2",
+      "id": 1,
       "productionRecordId": 1,
       "quantityValue": 410,
       "quantityUnit": "KILOGRAM",
@@ -362,7 +391,7 @@
       "recordedAt": "2026-10-03T09:45:00-05:00"
     },
     {
-      "id": "99752d92-08c9-4487-9889-474347047013",
+      "id": 2,
       "productionRecordId": 2,
       "quantityValue": 335.5,
       "quantityUnit": "KILOGRAM",
@@ -372,7 +401,7 @@
       "recordedAt": "2026-10-03T11:20:00-05:00"
     },
     {
-      "id": "b5d2c9a6-38e3-4c7e-9677-8b4ac8c66ad0",
+      "id": 3,
       "productionRecordId": 3,
       "quantityValue": 372.4,
       "quantityUnit": "KILOGRAM",
@@ -382,7 +411,7 @@
       "recordedAt": "2026-10-02T09:40:00-05:00"
     },
     {
-      "id": "c7f1e2a8-2ab1-4c7d-9bb2-2c8c6db5e1e4",
+      "id": 4,
       "productionRecordId": 5,
       "quantityValue": 400.2,
       "quantityUnit": "KILOGRAM",
@@ -392,7 +421,7 @@
       "recordedAt": "2026-10-03T09:10:00-05:00"
     },
     {
-      "id": "d83e3349-cafe-4430-b21b-87a09218198d",
+      "id": 5,
       "productionRecordId": 6,
       "quantityValue": 399.75,
       "quantityUnit": "KILOGRAM",
@@ -402,7 +431,7 @@
       "recordedAt": "2026-10-03T11:15:00-05:00"
     },
     {
-      "id": "e41a8ee4-520c-45b4-8a17-7da725f63c4a",
+      "id": 6,
       "productionRecordId": 7,
       "quantityValue": 463.6,
       "quantityUnit": "KILOGRAM",
@@ -414,7 +443,7 @@
   ],
   "machines": [
     {
-      "id": "f893f27c-940b-4be4-9155-e1a4f273cd01",
+      "id": 1,
       "code": "MOL-CLN-01",
       "name": "Pre-cleaning unit",
       "model": "Zaccaria PLZ-2",
@@ -422,7 +451,7 @@
       "statusChangedAt": "2026-10-03T07:30:00-05:00"
     },
     {
-      "id": "9085c5fc-e374-4628-aef9-9e44bd407a25",
+      "id": 2,
       "code": "MOL-HSK-01",
       "name": "Rice husker",
       "model": "Satake THU-35A",
@@ -430,7 +459,7 @@
       "statusChangedAt": "2026-10-03T09:20:00-05:00"
     },
     {
-      "id": "a4e65b2e-7747-44d9-9ae3-b82e2cce8995",
+      "id": 3,
       "code": "MOL-POL-01",
       "name": "Rice polisher",
       "model": "Bühler TopWhite II",
@@ -438,7 +467,7 @@
       "statusChangedAt": "2026-10-03T10:10:00-05:00"
     },
     {
-      "id": "b9fd0146-f8d7-4553-83a5-3d7514244c61",
+      "id": 4,
       "code": "MOL-DRY-01",
       "name": "Column dryer",
       "model": "Kepler Weber ADS-60",
@@ -446,7 +475,7 @@
       "statusChangedAt": "2026-10-02T06:45:00-05:00"
     },
     {
-      "id": "c3610ef6-9ebf-47d2-a38e-99c593b797b2",
+      "id": 5,
       "code": "MOL-GRD-01",
       "name": "Optical grain sorter",
       "model": "Satake REZS-4500",
@@ -454,7 +483,7 @@
       "statusChangedAt": "2026-10-03T10:30:00-05:00"
     },
     {
-      "id": "d7625a4a-90e1-4471-9283-5995ffbd1883",
+      "id": 6,
       "code": "MOL-PKG-01",
       "name": "Automatic bagging unit",
       "model": "Paglierani VT-600",
@@ -464,12 +493,12 @@
   ],
   "maintenance-records": [
     {
-      "id": "145fb408-c3b4-4f2d-a504-f512419d570e",
-      "machineId": "f893f27c-940b-4be4-9155-e1a4f273cd01",
+      "id": 1,
+      "machineId": 1,
       "type": "PREVENTIVE",
       "performedAt": "2026-10-01T08:00:00-05:00",
       "description": "Inspection and cleaning of the intake system and drive belts.",
-      "responsiblePrincipalId": "b3d36b83-013b-4655-ad0c-574704f0945e",
+      "responsiblePrincipalId": 2,
       "responsibleDisplayName": "Carlos Mendoza",
       "anomalyId": null,
       "failure": null,
@@ -478,12 +507,12 @@
       "downtimeMinutes": null
     },
     {
-      "id": "9b25b1bf-0135-4863-b551-fb8eb45acd03",
-      "machineId": "9085c5fc-e374-4628-aef9-9e44bd407a25",
+      "id": 2,
+      "machineId": 2,
       "type": "PREVENTIVE",
       "performedAt": "2026-10-05T09:30:00-05:00",
       "description": "Check husking rollers, bearings, and belt tension after the operating cycle.",
-      "responsiblePrincipalId": "b3d36b83-013b-4655-ad0c-574704f0945e",
+      "responsiblePrincipalId": 2,
       "responsibleDisplayName": "Carlos Mendoza",
       "anomalyId": null,
       "failure": null,
@@ -492,12 +521,12 @@
       "downtimeMinutes": null
     },
     {
-      "id": "f35426e1-2e06-472d-aafd-dd399f12df80",
-      "machineId": "9085c5fc-e374-4628-aef9-9e44bd407a25",
+      "id": 3,
+      "machineId": 2,
       "type": "CORRECTIVE",
       "performedAt": "2026-10-03T14:20:00-05:00",
       "description": "Replaced the worn drive belt and adjusted pulley alignment.",
-      "responsiblePrincipalId": "b3d36b83-013b-4655-ad0c-574704f0945e",
+      "responsiblePrincipalId": 2,
       "responsibleDisplayName": "Carlos Mendoza",
       "anomalyId": null,
       "failure": "Drive belt slipped and stopped the husking mechanism.",
@@ -506,12 +535,12 @@
       "downtimeMinutes": 75
     },
     {
-      "id": "a10ce04b-847c-4cf1-9e32-1fe924b84d61",
-      "machineId": "a4e65b2e-7747-44d9-9ae3-b82e2cce8995",
+      "id": 4,
+      "machineId": 3,
       "type": "PREVENTIVE",
       "performedAt": "2026-09-30T10:15:00-05:00",
       "description": "Lubricated bearings and calibrated polishing pressure.",
-      "responsiblePrincipalId": "8b091d76-ce96-4468-a1be-54be5bc3b6f2",
+      "responsiblePrincipalId": 3,
       "responsibleDisplayName": "Lucía Torres",
       "anomalyId": null,
       "failure": null,
@@ -520,26 +549,26 @@
       "downtimeMinutes": null
     },
     {
-      "id": "b2c7e4c0-d2e2-4798-81cd-824708966ceb",
-      "machineId": "a4e65b2e-7747-44d9-9ae3-b82e2cce8995",
+      "id": 5,
+      "machineId": 3,
       "type": "CORRECTIVE",
       "performedAt": "2026-10-04T07:50:00-05:00",
       "description": "Inspected abnormal vibration in the polishing chamber.",
-      "responsiblePrincipalId": "8b091d76-ce96-4468-a1be-54be5bc3b6f2",
+      "responsiblePrincipalId": 3,
       "responsibleDisplayName": "Lucía Torres",
-      "anomalyId": "ANM-2026-014",
+      "anomalyId": 14,
       "failure": "Excessive vibration during the polishing cycle.",
       "cause": "Unbalanced polishing rotor pending replacement.",
       "actionTaken": "Stopped the machine and isolated the polishing chamber.",
       "downtimeMinutes": 140
     },
     {
-      "id": "c39c2518-8238-4037-a3aa-6778d47a5319",
-      "machineId": "b9fd0146-f8d7-4553-83a5-3d7514244c61",
+      "id": 6,
+      "machineId": 4,
       "type": "PREVENTIVE",
       "performedAt": "2026-10-01T12:30:00-05:00",
       "description": "Cleaned temperature sensors and verified burner operation.",
-      "responsiblePrincipalId": "e4511299-40e9-42d5-a97c-9fddbb67030f",
+      "responsiblePrincipalId": 1,
       "responsibleDisplayName": "Jorge Salazar",
       "anomalyId": null,
       "failure": null,
@@ -548,12 +577,12 @@
       "downtimeMinutes": null
     },
     {
-      "id": "d48dcb63-7e51-4c95-a071-289c4f72fe92",
-      "machineId": "c3610ef6-9ebf-47d2-a38e-99c593b797b2",
+      "id": 7,
+      "machineId": 5,
       "type": "PREVENTIVE",
       "performedAt": "2026-10-02T11:00:00-05:00",
       "description": "Calibrated optical sensors and cleaned the inspection channels.",
-      "responsiblePrincipalId": "e4511299-40e9-42d5-a97c-9fddbb67030f",
+      "responsiblePrincipalId": 1,
       "responsibleDisplayName": "Jorge Salazar",
       "anomalyId": null,
       "failure": null,
@@ -562,26 +591,26 @@
       "downtimeMinutes": null
     },
     {
-      "id": "e56dc57a-13ac-4b0e-a351-7632cdaece03",
-      "machineId": "d7625a4a-90e1-4471-9283-5995ffbd1883",
+      "id": 8,
+      "machineId": 6,
       "type": "CORRECTIVE",
       "performedAt": "2026-10-03T15:10:00-05:00",
       "description": "Diagnosed a failure in the bag sealing assembly.",
-      "responsiblePrincipalId": "8b091d76-ce96-4468-a1be-54be5bc3b6f2",
+      "responsiblePrincipalId": 3,
       "responsibleDisplayName": "Lucía Torres",
-      "anomalyId": "ANM-2026-013",
+      "anomalyId": 13,
       "failure": "The sealing jaw did not reach the configured temperature.",
       "cause": "Burned heating element in the sealing assembly.",
       "actionTaken": "Disconnected the damaged element and requested a replacement.",
       "downtimeMinutes": 95
     },
     {
-      "id": "f6070953-a68c-4e7e-8446-4826eaff40f4",
-      "machineId": "f893f27c-940b-4be4-9155-e1a4f273cd01",
+      "id": 9,
+      "machineId": 1,
       "type": "PREVENTIVE",
       "performedAt": "2026-10-04T06:40:00-05:00",
       "description": "Verified sieve fastening and removed accumulated impurities.",
-      "responsiblePrincipalId": "b3d36b83-013b-4655-ad0c-574704f0945e",
+      "responsiblePrincipalId": 2,
       "responsibleDisplayName": "Carlos Mendoza",
       "anomalyId": null,
       "failure": null,
@@ -590,14 +619,14 @@
       "downtimeMinutes": null
     },
     {
-      "id": "a718259a-4daa-49bd-97af-016515758bb3",
-      "machineId": "b9fd0146-f8d7-4553-83a5-3d7514244c61",
+      "id": 10,
+      "machineId": 4,
       "type": "CORRECTIVE",
       "performedAt": "2026-10-02T15:25:00-05:00",
       "description": "Restored the signal from the outlet temperature sensor.",
-      "responsiblePrincipalId": "e4511299-40e9-42d5-a97c-9fddbb67030f",
+      "responsiblePrincipalId": 1,
       "responsibleDisplayName": "Jorge Salazar",
-      "anomalyId": "ANM-2026-012",
+      "anomalyId": 12,
       "failure": "Intermittent outlet temperature reading.",
       "cause": "Loose terminal in the sensor connector.",
       "actionTaken": "Secured the terminal and verified stable readings.",

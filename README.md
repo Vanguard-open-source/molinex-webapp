@@ -46,10 +46,12 @@ http://localhost:4200
 
 The development environment uses JSON Server to simulate the backend REST API.
 
-Run `server/start.sh` from its IntelliJ run configuration or execute the following command from the project root in PowerShell:
+Run the companion mock server, which applies the identity and inquiry contract. From the project root in PowerShell:
 
 ```powershell
-& ".\node_modules\.bin\json-server.cmd" --watch server\db.json --routes server\routes.json --port 3000
+cd ..\molinex-platform-mock
+npm install
+npm start
 ```
 
 The fake API will be available at:
@@ -102,3 +104,18 @@ Vanguard Open Source Development Team
 ## License
 
 This project is licensed under the MIT License.
+
+
+## Run with the mock API
+
+Use Node.js 24 or later. In the standalone molinex-platform-mock project run `npm install` and `npm start`
+(default port 3000), then run `npm ci` and `npm start` in this webapp (port 4200). The development environment
+already points to http://localhost:3000/api/v1. No database or backend connection is required.
+Demo accounts are administrator@molinex.test, operator@molinex.test and technician@molinex.test;
+all use the deliberately fake password `FAKE-demo-only-2026!`. Set MOCK_REQUIRE_TOKEN=true before
+starting the mock to exercise bearer interception and expired sessions. Mock tokens are opaque and
+invalidated on restart; they are not production JWTs. User administration creates accounts only.
+The production environment retains its deployed mock URL. When the real backend is ready, change
+apiBaseUrl in the intended environment to http://localhost:8080/api/v1 and configure its profile/CORS.
+Never use the webapp's bare `server/db.json` through JSON Server as an authentication API; use the
+standalone mock server, which prevents credential listing. Do not use real credentials with demo data.

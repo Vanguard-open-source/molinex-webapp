@@ -1,0 +1,72 @@
+:host {
+  display: block;
+}
+.identity-view {
+  margin: 2rem auto;
+  max-width: 30rem;
+}
+.identity-view--wide {
+  max-width: 44rem;
+}
+header {
+  margin-bottom: 1.5rem;
+}
+h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+  margin: 0.5rem 0;
+}
+p {
+  color: var(--molinex-text-secondary);
+  line-height: 1.6;
+}
+.eyebrow {
+  color: var(--molinex-blue);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+form {
+  background: var(--molinex-surface);
+  border: 1px solid var(--molinex-border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: grid;
+  gap: 0.75rem;
+}
+mat-form-field {
+  width: 100%;
+}
+button {
+  min-height: 44px;
+}
+.feedback {
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.error {
+  color: var(--molinex-critical);
+}
+.success {
+  color: var(--molinex-success);
+}
+.public-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+a {
+  color: var(--molinex-blue);
+  line-height: 1.6;
+}
+@media (max-width: 767px) {
+  .identity-view {
+    margin: 1rem auto;
+  }
+  form {
+    padding: 1rem;
+  }
+  .public-links {
+    flex-direction: column;
+  }
+}

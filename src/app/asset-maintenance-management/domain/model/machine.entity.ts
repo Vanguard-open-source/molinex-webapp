@@ -2,8 +2,8 @@ import { BaseEntity } from '../../../shared/domain/model/base-entity';
 import { MachineCode } from './machine-code';
 import { MachineStatus } from './machine-status';
 
-export class Machine implements BaseEntity<string> {
-  #id: string;
+export class Machine implements BaseEntity<number> {
+  #id: number;
   readonly #code: MachineCode;
   readonly #name: string;
   readonly #model: string;
@@ -11,7 +11,7 @@ export class Machine implements BaseEntity<string> {
   readonly #statusChangedAt: Date;
 
   constructor(props: {
-    id: string;
+    id: number;
     code: MachineCode;
     name: string;
     model: string;
@@ -29,11 +29,11 @@ export class Machine implements BaseEntity<string> {
     this.#statusChangedAt = props.statusChangedAt;
   }
 
-  get id(): string {
+  get id(): number {
     return this.#id;
   }
 
-  set id(value: string) {
+  set id(value: number) {
     this.#id = value;
   }
 

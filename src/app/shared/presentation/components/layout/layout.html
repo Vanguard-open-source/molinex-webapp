@@ -1,9 +1,10 @@
-<div class="application-shell">
-  <div class="navigation-panel" [class.navigation-panel--open]="navigationOpen()">
-    <app-side-navigation [navigationGroups]="options()" (navigated)="closeNavigation()" />
-  </div>
-
-  @if (navigationOpen()) {
+<div class="application-shell" [class.application-shell--public]="!iam.isSignedIn()">
+  @if (iam.isSignedIn()) {
+    <div class="navigation-panel" [class.navigation-panel--open]="navigationOpen()">
+      <app-side-navigation [navigationGroups]="options()" (navigated)="closeNavigation()" />
+    </div>
+  }
+  @if (navigationOpen() && iam.isSignedIn()) {
     <button
       class="navigation-backdrop"
       type="button"
@@ -14,8 +15,12 @@
 
   <div class="application-shell__content">
     <app-top-bar (menuToggled)="toggleNavigation()" />
-    <main class="page-content" id="main-content">
+    <main class="page-content" id="main-content" tabindex="-1">
+      @if (iam.notice(); as notice) {
+        <p role="alert" aria-live="assertive">{{ notice | translate }}</p>
+      }
       <router-outlet />
     </main>
+    <app-footer-content />
   </div>
 </div>

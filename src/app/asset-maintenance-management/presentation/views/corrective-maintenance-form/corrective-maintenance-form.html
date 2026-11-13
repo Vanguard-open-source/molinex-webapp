@@ -82,7 +82,10 @@
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>{{ 'corrective-maintenance-form.anomaly' | translate }}</mat-label>
-        <input matInput formControlName="anomalyId" maxlength="100" />
+        <input matInput type="number" min="1" step="1" formControlName="anomalyId" />
+        @if (isInvalidControl(form, 'anomalyId')) {
+          <mat-error>{{ 'corrective-maintenance-form.errors.anomaly' | translate }}</mat-error>
+        }
         <mat-hint>{{ 'corrective-maintenance-form.anomaly-help' | translate }}</mat-hint>
       </mat-form-field>
     </div>
