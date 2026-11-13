@@ -5,8 +5,8 @@ import { Percentage } from './percentage';
 
 const KILOGRAMS_PER_METRIC_TON = 1_000;
 
-export class WasteRecord implements BaseEntity<string> {
-  #id: string;
+export class WasteRecord implements BaseEntity<number> {
+  #id: number;
   readonly #productionRecordId: number;
   readonly #quantity: Weight;
   readonly #baseWeight: Weight | null;
@@ -14,7 +14,7 @@ export class WasteRecord implements BaseEntity<string> {
   readonly #recordedAt: Date;
 
   constructor(props: {
-    id: string;
+    id: number;
     productionRecordId: number;
     quantity: Weight;
     baseWeight: Weight | null;
@@ -28,11 +28,11 @@ export class WasteRecord implements BaseEntity<string> {
     this.#recordedAt = props.recordedAt;
   }
 
-  get id(): string {
+  get id(): number {
     return this.#id;
   }
 
-  set id(value: string) {
+  set id(value: number) {
     this.#id = value;
   }
 

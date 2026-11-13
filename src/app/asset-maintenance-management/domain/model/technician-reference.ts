@@ -1,16 +1,16 @@
 export class TechnicianReference {
-  readonly #principalId: string;
+  readonly #principalId: number;
   readonly #displayName: string;
 
-  constructor(principalId: string, displayName: string) {
-    if (!principalId.trim() || !displayName.trim()) {
+  constructor(principalId: number, displayName: string) {
+    if (!Number.isInteger(principalId) || principalId <= 0 || !displayName.trim()) {
       throw new Error('Technician identification and display name are required.');
     }
     this.#principalId = principalId;
     this.#displayName = displayName.trim();
   }
 
-  get principalId(): string {
+  get principalId(): number {
     return this.#principalId;
   }
 

@@ -82,7 +82,7 @@ export class WasteRecordForm extends BaseForm {
 
     this.store.addWasteRecord(
       new WasteRecord({
-        id: crypto.randomUUID(),
+        id: 0,
         productionRecordId: value.productionRecordId,
         quantity: new Weight(value.quantityValue, value.quantityUnit),
         baseWeight: new Weight(

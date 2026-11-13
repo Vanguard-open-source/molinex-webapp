@@ -1,3 +1,4 @@
+import { SessionCoordinator } from '../../../../shared/application/session-coordinator';
 import { Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -13,7 +14,6 @@ import { MaintenanceDescription } from '../../../domain/model/maintenance-descri
 import { MaintenanceRecord } from '../../../domain/model/maintenance-record.entity';
 import { TechnicianReference } from '../../../domain/model/technician-reference';
 
-const CURRENT_TECHNICIAN_ID = 'b3d36b83-013b-4655-ad0c-574704f0945e';
 const MILLISECONDS_PER_MINUTE = 60_000;
 
 @Component({
@@ -31,17 +31,24 @@ const MILLISECONDS_PER_MINUTE = 60_000;
 })
 export class CorrectiveMaintenanceForm extends BaseForm {
   protected readonly store = inject(AssetMaintenanceStore);
+  readonly #session = inject(SessionCoordinator);
   readonly #formBuilder = inject(FormBuilder);
   readonly #router = inject(Router);
   protected readonly form = this.#formBuilder.nonNullable.group({
-    machineId: ['', Validators.required],
+    machineId: [0, [Validators.required, Validators.min(1)]],
     performedAt: [this.#toDateTimeLocal(new Date()), Validators.required],
-    responsibleDisplayName: ['', [Validators.required, Validators.maxLength(100)]],
+    responsibleDisplayName: [
+      this.#session.principal()?.displayName ?? '',
+      [Validators.required, Validators.maxLength(100)],
+    ],
     failure: ['', [Validators.required, Validators.maxLength(250)]],
     cause: ['', [Validators.required, Validators.maxLength(250)]],
     actionTaken: ['', [Validators.required, Validators.maxLength(500)]],
     downtimeMinutes: [0, [Validators.required, Validators.min(0)]],
-    anomalyId: ['', Validators.maxLength(100)],
+    anomalyId: this.#formBuilder.control<number | null>(null, [
+      Validators.min(1),
+      Validators.pattern(/^[0-9]+$/),
+    ]),
   });
 
   protected submit(): void {
@@ -50,6 +57,11 @@ export class CorrectiveMaintenanceForm extends BaseForm {
       return;
     }
 
+    const principalId = this.#session.principal()?.id;
+    if (!principalId) {
+      void this.#router.navigate(['/iam/sign-in']);
+      return;
+    }
     const value = this.form.getRawValue();
     if (!this.store.machineExists(value.machineId)) {
       this.form.controls.machineId.setErrors({ unknownMachine: true });
@@ -65,13 +77,13 @@ export class CorrectiveMaintenanceForm extends BaseForm {
     });
     this.store.addMaintenanceRecord(
       new MaintenanceRecord({
-        id: crypto.randomUUID(),
+        id: 0,
         machineId: value.machineId,
         type: 'CORRECTIVE',
         performedAt: new Date(value.performedAt),
         description: new MaintenanceDescription(value.actionTaken),
-        responsible: new TechnicianReference(CURRENT_TECHNICIAN_ID, value.responsibleDisplayName),
-        anomalyId: value.anomalyId.trim() || null,
+        responsible: new TechnicianReference(principalId, value.responsibleDisplayName),
+        anomalyId: value.anomalyId,
         correctiveDetails,
       }),
     );

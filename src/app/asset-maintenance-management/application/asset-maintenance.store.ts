@@ -46,7 +46,7 @@ export class AssetMaintenanceStore {
     return this.machines().some((machine) => machine.code.value === normalizedCode);
   }
 
-  machineExists(machineId: string): boolean {
+  machineExists(machineId: number): boolean {
     return this.machineMap().has(machineId);
   }
 

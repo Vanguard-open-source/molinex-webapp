@@ -5,7 +5,7 @@ export interface WasteRecordsResponse extends BaseResponse {
   wasteRecords: WasteRecordResource[];
 }
 
-export interface WasteRecordResource extends BaseResource<string> {
+export interface WasteRecordResource extends BaseResource<number> {
   productionRecordId: number;
   quantityValue: number;
   quantityUnit: MeasurementUnit;

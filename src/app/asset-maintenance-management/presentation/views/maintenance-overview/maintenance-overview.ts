@@ -29,8 +29,8 @@ export class MaintenanceOverview {
   readonly #route = inject(ActivatedRoute);
   readonly #router = inject(Router);
   protected readonly selectedMachineId = toSignal(
-    this.#route.queryParamMap.pipe(map((params) => params.get('machineId'))),
-    { initialValue: this.#route.snapshot.queryParamMap.get('machineId') },
+    this.#route.queryParamMap.pipe(map((params) => Number(params.get('machineId')) || null)),
+    { initialValue: Number(this.#route.snapshot.queryParamMap.get('machineId')) || null },
   );
   protected readonly selectedMachine = computed(() => {
     const machineId = this.selectedMachineId();
@@ -62,7 +62,7 @@ export class MaintenanceOverview {
     return date.getTime() > Date.now();
   }
 
-  protected updateMachineFilter(machineId: string | null): void {
+  protected updateMachineFilter(machineId: number | null): void {
     this.#router
       .navigate([], {
         relativeTo: this.#route,

@@ -5,7 +5,7 @@ export interface MachinesResponse extends BaseResponse {
   machines: MachineResource[];
 }
 
-export interface MachineResource extends BaseResource<string> {
+export interface MachineResource extends BaseResource<number> {
   code: string;
   name: string;
   model: string;
