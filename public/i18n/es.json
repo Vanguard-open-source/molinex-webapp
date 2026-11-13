@@ -550,5 +550,82 @@
       "title": "Usuarios y permisos",
       "description": "Gestiona usuarios, roles y permisos."
     }
+  },
+  "commercial": {
+    "navigation": "Información comercial",
+    "plans-title": "Planes de suscripción",
+    "value-title": "Por qué Molinex",
+    "request": "Solicitar información",
+    "plans-eyebrow": "Planes que crecen con tu molino",
+    "plans-headline": "Comienza con lo que necesitas hoy.",
+    "value-eyebrow": "Inteligencia operativa para molinos de arroz",
+    "value-headline": "Convierte los datos de tu molino en mejores decisiones.",
+    "value-description": "Molinex conecta los datos de producción, calidad, materia prima y mantenimiento para reducir pérdidas, detectar anomalías y mejorar el rendimiento.",
+    "quote": "Cotización personalizada",
+    "compare": "Comparar prestaciones publicadas",
+    "feature": "Prestación",
+    "included": "Incluida",
+    "not-published": "No publicada para este plan",
+    "publication-note": "Las prestaciones corresponden a la landing publicada. La ausencia de una prestación no confirma su exclusión; solicita una cotización para conocer las condiciones.",
+    "inquiry-eyebrow": "¿Listo para mejorar tu operación?",
+    "inquiry-description": "Encontremos el punto de partida ideal para tu molino.",
+    "send": "Enviar solicitud",
+    "sending": "Enviando…",
+    "confirmation": "Tu solicitud quedó registrada para {{email}}.",
+    "fields": {
+      "fullName": "Nombre completo",
+      "email": "Correo laboral",
+      "phoneNumber": "Teléfono (opcional)",
+      "companyName": "Nombre de la empresa",
+      "message": "¿Qué te gustaría mejorar?"
+    },
+    "errors": {
+      "required": "Completa este campo obligatorio.",
+      "email": "Introduce un correo electrónico válido.",
+      "invalid": "Revisa los datos de contacto y la consulta. Se conservaron tus datos.",
+      "service": "No pudimos confirmar el registro. Se conservaron tus datos; inténtalo de nuevo."
+    },
+    "plans": {
+      "basic": {
+        "name": "Básico",
+        "headline": "Para comenzar a tener visibilidad",
+        "description": "Funciones esenciales para molinos pequeños que inician su transformación digital."
+      },
+      "professional": {
+        "name": "Profesional",
+        "headline": "Para operaciones conectadas",
+        "description": "Más contexto y control para equipos en crecimiento."
+      },
+      "enterprise": {
+        "name": "Empresarial",
+        "headline": "Para un rendimiento avanzado",
+        "description": "Una visión más amplia para operaciones complejas y múltiples equipos."
+      }
+    },
+    "features": {
+      "dashboard": "Panel operativo",
+      "production": "Registros de producción",
+      "quality": "Indicadores básicos de calidad",
+      "traceability": "Trazabilidad de lotes",
+      "maintenance": "Gestión del mantenimiento",
+      "alerts": "Alertas y recomendaciones",
+      "reports": "Reportes avanzados",
+      "trends": "Tendencias operativas",
+      "support": "Soporte escalable"
+    },
+    "benefits": {
+      "losses": {
+        "title": "Identifica las pérdidas antes.",
+        "description": "Supervisa el rendimiento, la merma y el arroz quebrado para investigar desviaciones antes de que resulten costosas."
+      },
+      "uptime": {
+        "title": "Planifica el mantenimiento con contexto.",
+        "description": "Combina el historial de los equipos y las señales operativas para priorizar inspecciones y reducir paradas inesperadas."
+      },
+      "shared": {
+        "title": "Tomen decisiones en conjunto.",
+        "description": "Ofrece a administradores, técnicos y operarios una misma visión confiable de lo que sucede."
+      }
+    }
   }
 }

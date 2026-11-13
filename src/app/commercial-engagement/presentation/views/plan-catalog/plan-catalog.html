@@ -1,0 +1,80 @@
+<section aria-labelledby="plans-title">
+  <header class="page-header">
+    <p class="eyebrow">{{ 'commercial.plans-eyebrow' | translate }}</p>
+    <h1 id="plans-title">{{ 'commercial.plans-title' | translate }}</h1>
+    <p>{{ 'commercial.plans-headline' | translate }}</p>
+  </header>
+  <nav class="public-links" [attr.aria-label]="'commercial.navigation' | translate">
+    <a routerLink="/iam/sign-in">{{ 'iam.sign-in' | translate }}</a>
+    <a routerLink="/commercial/value-proposition">{{ 'commercial.value-title' | translate }}</a>
+    <a routerLink="/commercial/inquiries/new">{{ 'commercial.request' | translate }}</a>
+  </nav>
+  <div class="plan-grid">
+    @for (plan of store.plans(); track plan.key) {
+      <mat-card appearance="outlined"
+        ><mat-card-header
+          ><mat-card-title>{{
+            'commercial.plans.' + plan.key + '.name' | translate
+          }}</mat-card-title></mat-card-header
+        >
+        <mat-card-content
+          ><h2>{{ 'commercial.plans.' + plan.key + '.headline' | translate }}</h2>
+          <p>{{ 'commercial.plans.' + plan.key + '.description' | translate }}</p>
+          <strong>{{ 'commercial.quote' | translate }}</strong>
+          <ul>
+            @for (feature of plan.features; track feature) {
+              <li>{{ 'commercial.features.' + feature | translate }}</li>
+            }
+          </ul></mat-card-content
+        >
+        <mat-card-actions
+          ><a mat-flat-button routerLink="/commercial/inquiries/new">{{
+            'commercial.request' | translate
+          }}</a></mat-card-actions
+        >
+      </mat-card>
+    }
+  </div>
+  <h2>{{ 'commercial.compare' | translate }}</h2>
+  <p id="comparison-note">{{ 'commercial.publication-note' | translate }}</p>
+  <div
+    class="comparison"
+    role="region"
+    tabindex="0"
+    [attr.aria-label]="'commercial.compare' | translate"
+    aria-describedby="comparison-note"
+  >
+    <table>
+      <caption>
+        {{
+          'commercial.compare' | translate
+        }}
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">{{ 'commercial.feature' | translate }}</th>
+          @for (plan of store.plans(); track plan.key) {
+            <th scope="col">{{ 'commercial.plans.' + plan.key + '.name' | translate }}</th>
+          }
+        </tr>
+      </thead>
+      <tbody>
+        @for (feature of features; track feature) {
+          <tr>
+            <th scope="row">{{ 'commercial.features.' + feature | translate }}</th>
+            @for (plan of store.plans(); track plan.key) {
+              <td>
+                {{
+                  (plan.features.includes(feature)
+                    ? 'commercial.included'
+                    : 'commercial.not-published'
+                  ) | translate
+                }}
+              </td>
+            }
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</section>

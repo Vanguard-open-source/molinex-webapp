@@ -550,5 +550,82 @@
       "title": "Users and permissions",
       "description": "Manage users, roles, and permissions."
     }
+  },
+  "commercial": {
+    "navigation": "Commercial information",
+    "plans-title": "Subscription plans",
+    "value-title": "Why Molinex",
+    "request": "Request information",
+    "plans-eyebrow": "Plans that grow with your mill",
+    "plans-headline": "Start with what you need today.",
+    "value-eyebrow": "Operational intelligence for rice mills",
+    "value-headline": "Turn mill data into better decisions.",
+    "value-description": "Molinex connects production, quality, raw materials and maintenance data so your team can reduce losses, detect anomalies and improve performance.",
+    "quote": "Custom quote",
+    "compare": "Compare published features",
+    "feature": "Feature",
+    "included": "Included",
+    "not-published": "Not listed",
+    "publication-note": "Features follow the published landing page. Not listed does not confirm exclusion; request a quote for plan conditions.",
+    "inquiry-eyebrow": "Ready to improve your operation?",
+    "inquiry-description": "Let’s find the right starting point for your mill.",
+    "send": "Send inquiry",
+    "sending": "Sending…",
+    "confirmation": "Your inquiry was registered for {{email}}.",
+    "fields": {
+      "fullName": "Full name",
+      "email": "Work email",
+      "phoneNumber": "Phone number (optional)",
+      "companyName": "Company name",
+      "message": "What would you like to improve?"
+    },
+    "errors": {
+      "required": "Complete this required field.",
+      "email": "Enter a valid email address.",
+      "invalid": "Check the contact fields and message. Your entries have been kept.",
+      "service": "We could not confirm registration. Your entries have been kept; please retry."
+    },
+    "plans": {
+      "basic": {
+        "name": "Basic",
+        "headline": "For starting visibility",
+        "description": "Core tools for smaller mills beginning their digital journey."
+      },
+      "professional": {
+        "name": "Professional",
+        "headline": "For connected operations",
+        "description": "More context and control for growing teams."
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "headline": "For advanced performance",
+        "description": "A broader view for complex operations and multiple teams."
+      }
+    },
+    "features": {
+      "dashboard": "Operational dashboard",
+      "production": "Production records",
+      "quality": "Basic quality indicators",
+      "traceability": "Lot traceability",
+      "maintenance": "Maintenance management",
+      "alerts": "Alerts and recommendations",
+      "reports": "Advanced reports",
+      "trends": "Operational trends",
+      "support": "Scalable support"
+    },
+    "benefits": {
+      "losses": {
+        "title": "Find losses earlier.",
+        "description": "Track yield, merma and broken rice so your team can investigate deviations before they become expensive."
+      },
+      "uptime": {
+        "title": "Plan maintenance with context.",
+        "description": "Combine equipment history and operational signals to prioritize inspections and reduce unexpected stops."
+      },
+      "shared": {
+        "title": "Make decisions together.",
+        "description": "Give managers, technicians and operators the same reliable picture of what is happening."
+      }
+    }
   }
 }

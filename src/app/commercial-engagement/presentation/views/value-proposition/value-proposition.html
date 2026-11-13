@@ -1,0 +1,30 @@
+<section aria-labelledby="value-title">
+  <header class="page-header">
+    <p class="eyebrow">{{ 'commercial.value-eyebrow' | translate }}</p>
+    <h1 id="value-title">{{ store.value().titleKey | translate }}</h1>
+    <p>{{ store.value().descriptionKey | translate }}</p>
+  </header>
+  <div class="benefit-grid">
+    @for (benefit of store.value().benefitKeys; track benefit) {
+      <mat-card appearance="outlined"
+        ><mat-card-header
+          ><mat-card-title>{{
+            'commercial.benefits.' + benefit + '.title' | translate
+          }}</mat-card-title></mat-card-header
+        >
+        <mat-card-content
+          ><p>
+            {{ 'commercial.benefits.' + benefit + '.description' | translate }}
+          </p></mat-card-content
+        ></mat-card
+      >
+    }
+  </div>
+  <nav class="public-links" [attr.aria-label]="'commercial.navigation' | translate">
+    <a mat-flat-button routerLink="/commercial/inquiries/new">{{
+      'commercial.request' | translate
+    }}</a>
+    <a mat-button routerLink="/commercial/plans">{{ 'commercial.plans-title' | translate }}</a>
+    <a mat-button routerLink="/iam/sign-in">{{ 'iam.sign-in' | translate }}</a>
+  </nav>
+</section>

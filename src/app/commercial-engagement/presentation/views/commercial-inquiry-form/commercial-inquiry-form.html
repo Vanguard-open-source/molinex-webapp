@@ -1,0 +1,67 @@
+<section class="inquiry-view" aria-labelledby="inquiry-title">
+  <header class="page-header">
+    <p class="eyebrow">{{ 'commercial.inquiry-eyebrow' | translate }}</p>
+    <h1 id="inquiry-title">{{ 'commercial.request' | translate }}</h1>
+    <p>{{ 'commercial.inquiry-description' | translate }}</p>
+  </header>
+  <nav class="public-links" [attr.aria-label]="'commercial.navigation' | translate">
+    <a routerLink="/commercial/plans">{{ 'commercial.plans-title' | translate }}</a
+    ><a routerLink="/iam/sign-in">{{ 'iam.sign-in' | translate }}</a>
+  </nav>
+  <form [formGroup]="form" (ngSubmit)="submit()" [attr.aria-busy]="store.loading()">
+    <div class="error" role="alert" aria-live="assertive" tabindex="-1">
+      @if (store.error(); as error) {
+        {{ error | translate }}
+        @if (store.detail(); as detail) {
+          <p>{{ detail }}</p>
+        }
+      }
+    </div>
+    <div class="success" role="status" aria-live="polite" tabindex="-1">
+      @if (store.receipt(); as receipt) {
+        {{ 'commercial.confirmation' | translate: { email: receipt.contact.email } }}
+      }
+    </div>
+    <mat-form-field appearance="outline"
+      ><mat-label>{{ 'commercial.fields.fullName' | translate }}</mat-label>
+      <input matInput type="text" formControlName="fullName" autocomplete="name" required />
+      @if (form.controls.fullName.touched && form.controls.fullName.invalid) {
+        <mat-error>{{ 'commercial.errors.required' | translate }}</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field appearance="outline"
+      ><mat-label>{{ 'commercial.fields.email' | translate }}</mat-label>
+      <input matInput type="email" formControlName="email" autocomplete="email" required />
+      @if (form.controls.email.touched && form.controls.email.invalid) {
+        <mat-error>{{ 'commercial.errors.email' | translate }}</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field appearance="outline"
+      ><mat-label>{{ 'commercial.fields.phoneNumber' | translate }}</mat-label>
+      <input matInput type="tel" formControlName="phoneNumber" autocomplete="tel" />
+    </mat-form-field>
+    <mat-form-field appearance="outline"
+      ><mat-label>{{ 'commercial.fields.companyName' | translate }}</mat-label>
+      <input
+        matInput
+        type="text"
+        formControlName="companyName"
+        autocomplete="organization"
+        required
+      />
+      @if (form.controls.companyName.touched && form.controls.companyName.invalid) {
+        <mat-error>{{ 'commercial.errors.required' | translate }}</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field appearance="outline"
+      ><mat-label>{{ 'commercial.fields.message' | translate }}</mat-label
+      ><textarea matInput formControlName="message" rows="5" required></textarea>
+      @if (form.controls.message.touched && form.controls.message.invalid) {
+        <mat-error>{{ 'commercial.errors.required' | translate }}</mat-error>
+      }
+    </mat-form-field>
+    <button mat-flat-button type="submit" [disabled]="store.loading()">
+      {{ (store.loading() ? 'commercial.sending' : 'commercial.send') | translate }}
+    </button>
+  </form>
+</section>
