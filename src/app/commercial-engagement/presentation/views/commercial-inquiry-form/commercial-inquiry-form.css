@@ -1,0 +1,59 @@
+:host {
+  display: block;
+}
+.inquiry-view {
+  max-width: 44rem;
+  margin: 1rem auto;
+}
+h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+}
+p {
+  color: var(--molinex-text-secondary);
+  line-height: 1.6;
+}
+.eyebrow {
+  color: var(--molinex-blue);
+  font-size: 0.82rem;
+}
+form {
+  background: var(--molinex-surface);
+  border: 1px solid var(--molinex-border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: grid;
+  gap: 0.75rem;
+}
+mat-form-field {
+  width: 100%;
+}
+button,
+a {
+  min-height: 44px;
+}
+.public-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+a {
+  color: var(--molinex-blue);
+}
+.error {
+  color: var(--molinex-critical);
+  overflow-wrap: anywhere;
+}
+.success {
+  color: var(--molinex-success);
+  overflow-wrap: anywhere;
+}
+@media (max-width: 767px) {
+  form {
+    padding: 1rem;
+  }
+  .public-links {
+    flex-direction: column;
+  }
+}
