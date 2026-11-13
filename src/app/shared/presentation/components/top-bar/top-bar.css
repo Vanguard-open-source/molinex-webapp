@@ -108,3 +108,21 @@
     font-size: 0.9rem;
   }
 }
+
+.top-bar__actions {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+@media (max-width: 767px) {
+  .top-bar {
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .top-bar__date {
+    display: none;
+  }
+  .top-bar__actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
