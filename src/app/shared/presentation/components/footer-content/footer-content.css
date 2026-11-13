@@ -1,0 +1,17 @@
+footer {
+  border-top: 1px solid var(--molinex-border);
+  padding: 1rem 1.5rem;
+  background: var(--molinex-surface);
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+a {
+  color: var(--molinex-blue);
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 0.875rem;
+}
