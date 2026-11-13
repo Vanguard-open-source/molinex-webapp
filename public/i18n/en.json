@@ -551,6 +551,36 @@
       "description": "Manage users, roles, and permissions."
     }
   },
+  "iam": {
+    "eyebrow": "Molinex account",
+    "sign-in": "Sign in",
+    "sign-out": "Sign out",
+    "welcome": "Sign in to access the tools for your role.",
+    "email": "Email address",
+    "password": "Password",
+    "full-name": "Full name",
+    "role": "Role",
+    "working": "Please wait…",
+    "users-title": "Users and permissions",
+    "create-user": "Create user",
+    "create-description": "Create an account with one role. User directory and editing are not available yet.",
+    "created": "Account created for {{email}}.",
+    "roles": {
+      "administrator": "Administrator",
+      "operator": "Production operator",
+      "technician": "Maintenance technician"
+    },
+    "errors": {
+      "email": "Enter a valid email address.",
+      "required": "Complete this required field.",
+      "credentials": "The credentials are invalid or the account is inactive.",
+      "invalid": "Check the required fields, email address and permitted role.",
+      "duplicate": "This email address is already registered.",
+      "forbidden": "Your role does not permit this action.",
+      "expired": "Your session is no longer valid. Please sign in again.",
+      "service": "The service could not confirm the request. Please retry."
+    }
+  },
   "commercial": {
     "navigation": "Commercial information",
     "plans-title": "Subscription plans",

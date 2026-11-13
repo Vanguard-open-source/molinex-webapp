@@ -551,6 +551,36 @@
       "description": "Gestiona usuarios, roles y permisos."
     }
   },
+  "iam": {
+    "eyebrow": "Cuenta de Molinex",
+    "sign-in": "Iniciar sesión",
+    "sign-out": "Cerrar sesión",
+    "welcome": "Inicia sesión para acceder a las funciones de tu rol.",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "full-name": "Nombre completo",
+    "role": "Rol",
+    "working": "Espera un momento…",
+    "users-title": "Usuarios y permisos",
+    "create-user": "Crear usuario",
+    "create-description": "Crea una cuenta con un rol. El directorio y la edición de usuarios aún no están disponibles.",
+    "created": "Cuenta creada para {{email}}.",
+    "roles": {
+      "administrator": "Administrador",
+      "operator": "Operario de producción",
+      "technician": "Técnico de mantenimiento"
+    },
+    "errors": {
+      "email": "Introduce un correo electrónico válido.",
+      "required": "Completa este campo obligatorio.",
+      "credentials": "Las credenciales no son válidas o la cuenta está inactiva.",
+      "invalid": "Revisa los campos obligatorios, el correo electrónico y el rol permitido.",
+      "duplicate": "Este correo electrónico ya está registrado.",
+      "forbidden": "Tu rol no permite realizar esta acción.",
+      "expired": "Tu sesión ya no es válida. Inicia sesión de nuevo.",
+      "service": "El servicio no pudo confirmar la solicitud. Inténtalo de nuevo."
+    }
+  },
   "commercial": {
     "navigation": "Información comercial",
     "plans-title": "Planes de suscripción",
