@@ -2,7 +2,7 @@
 
 All notable changes to Molinex are documented in this file.
 
-## [Unreleased]
+## [2.0.0] - 2026-11-13
 
 ### Added
 
