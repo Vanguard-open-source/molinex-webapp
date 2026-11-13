@@ -21,6 +21,13 @@ const pageNotFound = () =>
   );
 
 export const routes: Routes = [
+  {
+    path: 'commercial',
+    loadChildren: () =>
+      import('./commercial-engagement/presentation/commercial-engagement.routes').then(
+        (module) => module.commercialEngagementRoutes,
+      ),
+  },
   { path: 'production', loadChildren: productionManagementRoutes },
   { path: 'quality', loadChildren: qualityYieldControlRoutes },
   { path: 'assets', loadChildren: assetMaintenanceManagementRoutes },
