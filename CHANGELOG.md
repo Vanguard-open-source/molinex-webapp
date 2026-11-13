@@ -2,6 +2,16 @@
 
 All notable changes to Molinex are documented in this file.
 
+## [Unreleased]
+
+### Added
+
+- Identity and Access Management with sign-in, administrator-only user creation, signal session state, guards and bearer interception.
+
+### Changed
+
+- Role-filtered operational navigation and protected routes; sessionStorage failures do not prevent in-memory sessions.
+
 ## [0.1.0] - 2026-10-04
 
 ### Added

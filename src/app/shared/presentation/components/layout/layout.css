@@ -71,6 +71,10 @@
   }
 }
 
+.application-shell--public {
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .application-shell__content {
   display: flex;
   flex-direction: column;

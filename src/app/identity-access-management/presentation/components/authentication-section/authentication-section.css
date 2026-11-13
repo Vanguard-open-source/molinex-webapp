@@ -1,0 +1,35 @@
+:host {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.user-name {
+  font-size: 0.875rem;
+  overflow-wrap: anywhere;
+  max-width: 16rem;
+}
+button,
+a {
+  min-height: 44px;
+}
+@media (max-width: 767px) {
+  .user-name {
+    max-width: 11rem;
+  }
+}
+
+button,
+a {
+  border: 1px solid var(--molinex-blue);
+  border-radius: 0.5rem;
+  color: var(--molinex-blue);
+  background: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+button:hover,
+a:hover {
+  background: var(--molinex-blue-light);
+}

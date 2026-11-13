@@ -1,13 +1,15 @@
 <mat-toolbar class="top-bar" role="banner">
   <div class="top-bar__identity">
-    <button
-      class="icon-button menu-button"
-      type="button"
-      [attr.aria-label]="'shell.open-navigation' | translate"
-      (click)="menuToggled.emit()"
-    >
-      <span class="material-symbols-outlined" aria-hidden="true">menu</span>
-    </button>
+    @if (iam.isSignedIn()) {
+      <button
+        class="icon-button menu-button"
+        type="button"
+        [attr.aria-label]="'shell.open-navigation' | translate"
+        (click)="menuToggled.emit()"
+      >
+        <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+      </button>
+    }
     <div>
       <span class="top-bar__eyebrow">Molinex</span>
       <strong>{{ 'shell.operations-center' | translate }}</strong>
@@ -21,5 +23,6 @@
     </span>
 
     <app-language-switcher />
+    <app-authentication-section />
   </div>
 </mat-toolbar>
