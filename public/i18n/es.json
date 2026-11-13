@@ -627,5 +627,10 @@
         "description": "Ofrece a administradores, técnicos y operarios una misma visión confiable de lo que sucede."
       }
     }
+  },
+  "footer": {
+    "terms": "Términos y condiciones",
+    "privacy": "Política de privacidad",
+    "legal-navigation": "Información legal"
   }
 }
