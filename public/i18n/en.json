@@ -627,5 +627,10 @@
         "description": "Give managers, technicians and operators the same reliable picture of what is happening."
       }
     }
+  },
+  "footer": {
+    "terms": "Terms and conditions",
+    "privacy": "Privacy policy",
+    "legal-navigation": "Legal information"
   }
 }
