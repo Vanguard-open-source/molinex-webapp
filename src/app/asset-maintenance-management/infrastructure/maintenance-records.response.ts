@@ -5,14 +5,14 @@ export interface MaintenanceRecordsResponse extends BaseResponse {
   maintenanceRecords: MaintenanceRecordResource[];
 }
 
-export interface MaintenanceRecordResource extends BaseResource<string> {
-  machineId: string;
+export interface MaintenanceRecordResource extends BaseResource<number> {
+  machineId: number;
   type: MaintenanceType;
   performedAt: string;
   description: string;
-  responsiblePrincipalId: string;
+  responsiblePrincipalId: number;
   responsibleDisplayName: string;
-  anomalyId: string | null;
+  anomalyId: number | null;
   failure: string | null;
   cause: string | null;
   actionTaken: string | null;

@@ -60,7 +60,7 @@ export class MachineForm extends BaseForm {
 
     this.store.addMachine(
       new Machine({
-        id: crypto.randomUUID(),
+        id: 0,
         code: new MachineCode(value.code),
         name: value.name,
         model: value.model,

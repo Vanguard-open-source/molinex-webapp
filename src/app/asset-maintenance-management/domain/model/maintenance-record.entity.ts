@@ -4,27 +4,31 @@ import { MaintenanceDescription } from './maintenance-description';
 import { MaintenanceType } from './maintenance-type';
 import { TechnicianReference } from './technician-reference';
 
-export class MaintenanceRecord implements BaseEntity<string> {
-  #id: string;
-  readonly #machineId: string;
+export class MaintenanceRecord implements BaseEntity<number> {
+  #id: number;
+  readonly #machineId: number;
   readonly #type: MaintenanceType;
   readonly #performedAt: Date;
   readonly #description: MaintenanceDescription;
   readonly #responsible: TechnicianReference;
-  readonly #anomalyId: string | null;
+  readonly #anomalyId: number | null;
   readonly #correctiveDetails: CorrectiveMaintenanceDetails | null;
 
   constructor(props: {
-    id: string;
-    machineId: string;
+    id: number;
+    machineId: number;
     type: MaintenanceType;
     performedAt: Date;
     description: MaintenanceDescription;
     responsible: TechnicianReference;
-    anomalyId?: string | null;
+    anomalyId?: number | null;
     correctiveDetails?: CorrectiveMaintenanceDetails | null;
   }) {
-    if (!props.machineId.trim() || Number.isNaN(props.performedAt.getTime())) {
+    if (
+      !Number.isInteger(props.machineId) ||
+      props.machineId <= 0 ||
+      Number.isNaN(props.performedAt.getTime())
+    ) {
       throw new Error('A valid machine and maintenance date are required.');
     }
     this.#id = props.id;
@@ -40,15 +44,15 @@ export class MaintenanceRecord implements BaseEntity<string> {
     }
   }
 
-  get id(): string {
+  get id(): number {
     return this.#id;
   }
 
-  set id(value: string) {
+  set id(value: number) {
     this.#id = value;
   }
 
-  get machineId(): string {
+  get machineId(): number {
     return this.#machineId;
   }
 
@@ -68,7 +72,7 @@ export class MaintenanceRecord implements BaseEntity<string> {
     return this.#responsible;
   }
 
-  get anomalyId(): string | null {
+  get anomalyId(): number | null {
     return this.#anomalyId;
   }
 
