@@ -1,3 +1,4 @@
+import { FooterContent } from '../footer-content/footer-content';
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
@@ -5,7 +6,7 @@ import { NavigationGroup, SideNavigation } from '../side-navigation/side-navigat
 import { TopBar } from '../top-bar/top-bar';
 
 @Component({
-  imports: [RouterOutlet, SideNavigation, TopBar, TranslatePipe],
+  imports: [FooterContent, RouterOutlet, SideNavigation, TopBar, TranslatePipe],
   selector: 'app-layout',
   styleUrl: './layout.css',
   templateUrl: './layout.html',
