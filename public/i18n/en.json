@@ -505,7 +505,8 @@
       "cause": "Describe the identified cause.",
       "action": "Describe the corrective action taken.",
       "downtime": "Enter a downtime of zero minutes or greater.",
-      "create": "Corrective maintenance could not be recorded."
+      "create": "Corrective maintenance could not be recorded.",
+      "anomaly": "Enter a positive whole-number reference."
     }
   },
   "views": {

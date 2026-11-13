@@ -505,7 +505,8 @@
       "cause": "Describe la causa identificada.",
       "action": "Describe la acción correctiva realizada.",
       "downtime": "Ingresa un tiempo de parada igual o mayor a cero minutos.",
-      "create": "No se pudo registrar el mantenimiento correctivo."
+      "create": "No se pudo registrar el mantenimiento correctivo.",
+      "anomaly": "Introduce una referencia numérica entera positiva."
     }
   },
   "views": {
